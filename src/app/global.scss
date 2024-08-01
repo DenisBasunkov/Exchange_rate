@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    gap: 15px;
+}
+
+header {
+
+    width: 100%;
+    padding: 5px 15px;
+    box-shadow: 0 0 6px 0 hsla(0, 0%, 0%, .3);
+    z-index: 10;
+    background-color: aliceblue;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Link {
+    color: #115B9B;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 800;
+    background-color: transparent;
+    padding: 5px 15px;
+    transition: all .5s;
+    border-radius: 10px;
+    margin: 15px 5px;
+
+    &:hover {
+        background-color: hsla(0, 0%, 0%, .09);
+    }
+
+}
+
+.Card {
+    box-shadow: 0 0 10px 2px hsla(0, 0%, 0%, .38);
+    padding: 15px;
+    border-radius: 15px;
+}
+
+.Button {
+    box-shadow: 0 0 10px 0 hsla(0, 0%, 0%, .3);
+    // background-color: #115B9B;
+    background-color: red;
+    color: aliceblue;
+    font-weight: 900;
+    transition: all .5s;
+    border-radius: 5px;
+    width: 100%;
+
+    &:hover {
+        background-color: #0470C6;
+        color: aliceblue;
+        border-radius: 10px;
+    }
+}
+
+.Reverse {
+    transform: rotateZ(0deg);
+    transition: all .5s;
+
+    &:hover {
+        transform: rotateZ(180deg);
+    }
+
+}
+
+.CustomInput {
+    outline: none;
+    border-radius: 7px;
+    border: 1px solid black;
+    width: 100%;
+
+    overflow: hidden;
+
+    &:focus {
+        outline: none;
+        border: 1px solid black;
+        box-shadow: 0 0 0px 2px gray;
+    }
+
+}
+
+.formConverter {
+
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 15px;
+
+}
+
+.animation {
+
+
+    transition: all .5s;
+    animation: circle-to-square;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes circle-to-square {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+.ListVulute {
+    display: grid;
+    grid-template-columns: repeat(3, 250px);
+    gap: 0px 10px;
+    justify-content: center;
+}
+
+.SearchListVulute {
+    display: grid;
+    grid-template-columns: repeat(1, 250px);
+    gap: 0px 10px;
+    justify-content: center;
+}
+
+.SearchMenu {
+    width: 90%;
+    height: 75vh;
+    overflow: auto;
+}
+
+
+@media (max-width:1160px) {
+    .ListVulute {
+        grid-template-columns: repeat(3, 250px);
+    }
+
+    .SearchListVulute {
+        grid-template-columns: repeat(3, 250px);
+    }
+
+    .SearchMenu {
+        width: 80vw;
+    }
+
+}
+
+@media (max-width:830px) {
+
+    .ListVulute {
+        grid-template-columns: repeat(2, 250px);
+    }
+
+    .SearchListVulute {
+        grid-template-columns: repeat(2, 250px);
+    }
+
+    .formConverter {
+
+        grid-template-columns: auto;
+
+    }
+}
+
+@media (max-width:500px) {
+
+    .ListVulute {
+        grid-template-columns: repeat(1, 250px);
+    }
+
+    .SearchListVulute {
+        grid-template-columns: repeat(1, 250px);
+    }
+
+}

@@ -1,0 +1,24 @@
+.main {
+
+    padding: 15px;
+    max-height: 90vh;
+    display: grid;
+    grid-template-columns: auto 5fr;
+    gap: 5px;
+    height: 100%;
+
+    & article {
+        padding: 15px;
+    }
+
+}
+
+
+@media (max-width:1160px) {
+
+    .main {
+        grid-template-rows: auto auto;
+        grid-template-columns: auto;
+    }
+
+}
